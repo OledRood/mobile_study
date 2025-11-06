@@ -11,4 +11,6 @@ class AppImages {
   static const String loader = 'assets/images/loader.svg';
 
   static const String mockedAutoImage = 'assets/images/iris 1.png';
+  static const String mockedAutoDetailsPhoto =
+      'assets/mocked/car_detail_photo.png';
 }

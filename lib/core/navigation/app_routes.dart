@@ -73,9 +73,8 @@ enum AppRoutes {
 /// Конфигурация маршрутов для GoRouter
 List<RouteBase> get appRoutes => [
   StatefulShellRoute.indexedStack(
-    builder: (context, state, navigationShell) => BottomNavigationShell(
-      navigationShell: navigationShell,
-    ), // см. файл bottom_navigation.dart
+    builder: (context, state, navigationShell) =>
+        BottomNavigationShell(navigationShell: navigationShell),
     branches: [
       StatefulShellBranch(
         routes: [

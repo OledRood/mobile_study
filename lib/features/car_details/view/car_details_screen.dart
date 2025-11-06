@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_study/ui/theme/models/app_images.dart';
 
 class CarDetailsScreen extends StatelessWidget {
   final String carId;
@@ -6,6 +7,14 @@ class CarDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Детали о машине с ID: $carId')));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Детали'),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.favorite_outline)),
+        ],
+      ),
+      body: Column(children: [Image.asset(AppImages.mockedAutoDetailsPhoto)]),
+    );
   }
 }

@@ -17,7 +17,6 @@ class SettingsViewModel extends StateNotifier<SettingsState> {
     required this.appNavigation,
     required this.authService,
   }) : super(SettingsState()) {
-    // Используем начальное состояние из themeNotifier
     setListOfSettingsItems();
   }
 
