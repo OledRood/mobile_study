@@ -13,4 +13,8 @@ class AppImages {
   static const String mockedAutoImage = 'assets/images/iris 1.png';
   static const String mockedAutoDetailsPhoto =
       'assets/mocked/car_detail_photo.png';
+
+  static const String mockedBmwX5Image = "assets/mocked/BMW_X5.jpg";
+  static const String mockedLadaLargusImage = "assets/mocked/lada_largus.jpeg";
+  static const String mockedMercedesImage = "assets/mocked/merc.png";
 }

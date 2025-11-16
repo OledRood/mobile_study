@@ -51,10 +51,8 @@ enum AppRoutes {
   //home
   home('/home'),
   searchResults('/home/search-results'),
-
-  //car
-  carDetails("/car-details"),
-  carRent("/car-rent"),
+  carDetails("/home/car-details"),
+  carRent("/home/car-rent"),
 
   //settings
   settings('/settings'),
@@ -88,6 +86,26 @@ List<RouteBase> get appRoutes => [
                 path: "search-results",
                 name: AppRoutes.searchResults.name,
                 builder: (context, state) => const SearchResultScreen(),
+              ),
+              GoRoute(
+                path: "car-details",
+                name: AppRoutes.carDetails.name,
+                builder: (context, state) {
+                  final params = state.extra as CarParams?;
+                  final id = params?.carId ?? '';
+
+                  return CarDetailsScreen(carId: id);
+                },
+              ),
+              GoRoute(
+                path: "car-rent",
+                name: AppRoutes.carRent.name,
+                builder: (context, state) {
+                  final params = state.extra as CarParams?;
+                  final id = params?.carId ?? '';
+
+                  return CarRentScreen(carId: id);
+                },
               ),
             ],
           ),
@@ -154,26 +172,6 @@ List<RouteBase> get appRoutes => [
         ],
       ),
     ],
-  ),
-  GoRoute(
-    path: AppRoutes.carDetails.path,
-    name: AppRoutes.carDetails.name,
-    builder: (context, state) {
-      final params = state.extra as CarParams?;
-      final id = params?.carId ?? '';
-
-      return CarDetailsScreen(carId: id);
-    },
-  ),
-  GoRoute(
-    path: AppRoutes.carRent.path,
-    name: AppRoutes.carRent.name,
-    builder: (context, state) {
-      final params = state.extra as CarParams?;
-      final id = params?.carId ?? '';
-
-      return CarRentScreen(carId: id);
-    },
   ),
   GoRoute(
     path: AppRoutes.splash.path,
